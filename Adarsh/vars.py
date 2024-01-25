@@ -25,7 +25,7 @@ class Var(object):
     OWNER_USERNAME = str(getenv('OWNER_USERNAME', 'alone_to_feel'))
     if 'DYNO' in environ:
         ON_HEROKU = True
-        APP_NAME = str(getenv('rexcy'))
+        APP_NAME = str(getenv('APP_NAME'))
     
     else:
         ON_HEROKU = False
@@ -37,4 +37,4 @@ class Var(object):
         URL = "http://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://rexcy:I2TNWUO5ozivBQZO@cluster0.qb1o8ro.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'rexcy_bots'))
-    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
+    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001989094873")).split())) 
